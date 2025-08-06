@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - AvePOS | Parlons de votre Projet</title>
+    <meta name="description" content="Contactez l'équipe AvePOS pour discuter de votre projet de paiement digital. Support, démonstration, partenariat - nous sommes là pour vous aider.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav">
+                    <a href="index.html" class="logo">AvePOS</a>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Accueil</a></li>
+                        <li><a href="offres.html" class="nav-link">Nos Offres</a></li>
+                        <li><a href="apropos.html" class="nav-link">À Propos</a></li>
+                        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Parlons de votre Projet</h1>
+                    <p>Que vous soyez un petit commerçant, une entreprise ou un développeur, notre équipe est là pour vous accompagner dans l'intégration d'AvePOS.</p>
+                    <div class="hero-cta">
+                        <a href="https://wa.me/22670123456?text=Bonjour, je souhaite discuter d'un projet AvePOS" class="btn btn-primary">💬 WhatsApp Direct</a>
+                        <a href="tel:+22670123456" class="btn btn-outline">📞 Appelez maintenant</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Formulaire de Contact -->
+                    <div>
+                        <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                            <h2 class="section-title">Envoyez-nous un message</h2>
+                            <p class="section-subtitle">Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+                        </div>
+
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nom complet *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Adresse email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Numéro de téléphone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+226 XX XX XX XX">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Entreprise / Organisation</label>
+                                <input type="text" id="company" name="company" placeholder="Nom de votre entreprise">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Objet de votre demande *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Sélectionnez un sujet</option>
+                                    <option value="Demo">Demande de démonstration</option>
+                                    <option value="Integration">Aide à l'intégration</option>
+                                    <option value="Pricing">Questions sur les tarifs</option>
+                                    <option value="Partnership">Partenariat</option>
+                                    <option value="Support">Support technique</option>
+                                    <option value="Other">Autre</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Votre message *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Décrivez votre projet, vos besoins ou vos questions..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                    Envoyer le message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Informations de Contact -->
+                    <div class="contact-info">
+                        <h3>Contactez-nous directement</h3>
+                        <p>Choisissez le moyen qui vous convient le mieux pour nous joindre rapidement.</p>
+
+                        <div class="contact-item" onclick="AvePOS.sendEmail('contact@avepos.com', 'Contact depuis le site web', '')" style="cursor: pointer;">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p><a href="mailto:contact@avepos.com">contact@avepos.com</a><br>
+                                Réponse sous 24h maximum</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item" onclick="AvePOS.callNumber('+22670123456')" style="cursor: pointer;">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h4>Téléphone</h4>
+                                <p><a href="tel:+22670123456">+226 70 12 34 56</a><br>
+                                Lun-Ven : 8h-18h (UTC+0)</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item" onclick="AvePOS.openWhatsApp('22670123456', 'Bonjour, je souhaite en savoir plus sur AvePOS')" style="cursor: pointer;">
+                            <div class="contact-icon">💬</div>
+                            <div class="contact-details">
+                                <h4>WhatsApp</h4>
+                                <p><a href="https://wa.me/22670123456">+226 70 12 34 56</a><br>
+                                Support réactif 7j/7</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h4>Adresse</h4>
+                                <p>Secteur 12, Ouagadougou<br>
+                                Burkina Faso 🇧🇫<br>
+                                <small>Visites sur rendez-vous uniquement</small></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">⏰</div>
+                            <div class="contact-details">
+                                <h4>Horaires d'ouverture</h4>
+                                <p>Lundi - Vendredi : 8h - 18h<br>
+                                Samedi : 8h - 12h<br>
+                                Dimanche : Fermé<br>
+                                <small>Fuseau horaire : GMT+0 (Ouagadougou)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Support Urgent -->
+        <section class="section stats">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Besoin d'un support urgent ?</h2>
+                    <p class="section-subtitle">Pour les problèmes techniques critiques, contactez-nous immédiatement</p>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-icon">🚨</div>
+                        <h3>Support Technique Urgent</h3>
+                        <p>Pour les problèmes critiques affectant vos transactions en production.</p>
+                        <ul>
+                            <li>Paiements non fonctionnels</li>
+                            <li>Erreurs API en production</li>
+                            <li>Problèmes de sécurité</li>
+                            <li>Pannes de service</li>
+                        </ul>
+                        <a href="https://wa.me/22670123456?text=🚨 URGENT - Problème technique AvePOS" class="btn btn-primary">
+                            🚨 Contact Urgent
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">💼</div>
+                        <h3>Rendez-vous Commercial</h3>
+                        <p>Planifiez une rencontre avec notre équipe commerciale pour discuter de vos besoins.</p>
+                        <ul>
+                            <li>Démonstration personnalisée</li>
+                            <li>Étude de vos besoins</li>
+                            <li>Proposition commerciale</li>
+                            <li>Formation sur site</li>
+                        </ul>
+                        <a href="mailto:commercial@avepos.com?subject=Demande de rendez-vous&body=Bonjour, je souhaite planifier un rendez-vous pour discuter de mes besoins AvePOS." class="btn btn-secondary">
+                            📅 Prendre RDV
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">🤝</div>
+                        <h3>Partenariats</h3>
+                        <p>Vous êtes développeur, intégrateur ou revendeur ? Parlons partenariat.</p>
+                        <ul>
+                            <li>Programme partenaire développeur</li>
+                            <li>Revente de solutions</li>
+                            <li>Intégrations personnalisées</li>
+                            <li>Co-développement</li>
+                        </ul>
+                        <a href="mailto:partenaires@avepos.com?subject=Demande de partenariat&body=Bonjour, je suis intéressé par un partenariat avec AvePOS." class="btn btn-secondary">
+                            🤝 Devenir Partenaire
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Rapide -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Questions Fréquentes Rapides</h2>
+                    <p class="section-subtitle">Quelques réponses rapides avant de nous contacter</p>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <h4>💰 Combien ça coûte ?</h4>
+                        <p>Pas d'abonnement ! Seulement 2,5% par transaction réussie pour les petits commerçants, 2% pour les entreprises.</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>⏱️ Combien de temps pour l'intégration ?</h4>
+                        <p>15 minutes avec nos plugins, quelques heures avec l'API. Notre équipe vous accompagne gratuitement.</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>🔐 Est-ce sécurisé ?</h4>
+                        <p>Oui ! Chiffrement SSL, conformité PCI-DSS, monitoring 24/7. Vos paiements sont en sécurité.</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>📱 Quels moyens de paiement ?</h4>
+                        <p>Orange Money, Moov Money, USSD (tous téléphones) et bientôt les cartes bancaires.</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="faq.html" class="btn btn-outline">Voir toutes les FAQ</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AvePOS</h3>
+                    <p>Solution de paiement innovante développée au Burkina Faso par AvePLUS. Simplifiez vos transactions avec des technologies adaptées au marché local.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">💼</a>
+                        <a href="https://wa.me/22670123456" class="social-link">💬</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Nos Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="offres.html">Paiement Mobile</a></li>
+                        <li><a href="offres.html">Paiement en Ligne</a></li>
+                        <li><a href="offres.html">Paiement USSD</a></li>
+                        <li><a href="offres.html">API Développeur</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">Questions Fréquentes</a></li>
+                        <li><a href="contact.html">Support Technique</a></li>
+                        <li><a href="contact.html">Formation</a></li>
+                        <li><a href="contact.html">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📧 contact@avepos.com</p>
+                    <p>📞 +226 70 12 34 56</p>
+                    <p>📍 Ouagadougou, Burkina Faso</p>
+                    <p>💬 <a href="https://wa.me/22670123456">WhatsApp Support</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AvePOS - AvePLUS Startup. Tous droits réservés. Fièrement développé au Burkina Faso 🇧🇫</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
