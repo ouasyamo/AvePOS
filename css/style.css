@@ -383,6 +383,20 @@ p {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
 }
 
+/* Bouton d'urgence (rouge) */
+.btn-danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: var(--white);
+  box-shadow: var(--shadow-xl);
+  border: 2px solid transparent;
+}
+
+.btn-danger:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 25px 50px -12px rgba(239, 68, 68, 0.4);
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
 /* Sections avec plus d'espacement */
 .section {
   padding: var(--spacing-2xl) 0;
