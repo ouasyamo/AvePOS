@@ -236,13 +236,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
 
-    // Compteur animé pour les statistiques
+    // Compteur animé pour les statistiques (uniquement si valeur purement numérique)
     const statNumbers = document.querySelectorAll('.stat-item h3');
     statNumbers.forEach(stat => {
-        const targetValue = stat.textContent.replace(/\D/g, '');
-        if (targetValue > 0) {
-            animateCounter(stat, targetValue);
+        const originalText = stat.textContent.trim();
+        const numericOnly = /^\d+$/.test(originalText);
+        if (numericOnly) {
+            const targetValue = parseInt(originalText, 10);
+            if (targetValue > 0) {
+                animateCounter(stat, targetValue);
+            }
         }
+        // Laisser tel quel les valeurs non purement numériques (ex: "10M+", "24/7")
     });
 
     function animateCounter(element, target) {

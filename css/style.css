@@ -428,16 +428,16 @@ p {
 /* Cards modernes avec plus de contraste */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: var(--spacing-xl);
-  margin-top: var(--spacing-2xl);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
   width: 100%;
 }
 
 .card {
   background: var(--white);
-  border-radius: var(--radius-xl);
-  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
   border: 1px solid var(--border-light);
   transition: var(--transition);
   position: relative;
@@ -446,7 +446,7 @@ p {
   height: 100%;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
 }
 
 .card::before {
@@ -466,14 +466,14 @@ p {
 }
 
 .card-icon {
-  width: 80px;
-  height: 80px;
+  width: 56px;
+  height: 56px;
   background: linear-gradient(135deg, var(--secondary-color), var(--secondary-light));
   border-radius: var(--radius-xl);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
   font-size: 2rem;
   color: var(--white);
   box-shadow: var(--shadow-lg);
@@ -488,25 +488,40 @@ p {
 }
 
 .card h3 {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
   color: var(--text-dark);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
+  text-align: left;
 }
 
 .card p {
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
   flex-grow: 1;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--text-light);
+}
+
+/* Listes dans les cards (offres paiement mobile) */
+.card ul {
+  list-style: disc inside;
+  padding-left: 0;
+  margin-top: var(--spacing-sm);
+  margin-bottom: 0;
+}
+
+.card li {
+  margin-bottom: 0.35rem;
+  color: var(--text-light);
+  line-height: 1.6;
 }
 
 .card .btn {
   align-self: flex-start;
   margin-top: auto;
-  padding: 1rem 2rem;
-  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
 }
 
 /* Stats Section avec plus de contraste */
@@ -529,8 +544,8 @@ p {
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-xl);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-lg);
   text-align: center;
   position: relative;
   z-index: 2;
@@ -538,8 +553,8 @@ p {
 
 .stat-item {
   background: var(--white);
-  padding: var(--spacing-2xl);
-  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xl);
   transition: var(--transition);
   border: 1px solid var(--border-light);
@@ -551,9 +566,9 @@ p {
 }
 
 .stat-item h3 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: var(--primary-color);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
   font-weight: 900;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   -webkit-background-clip: text;
@@ -562,7 +577,7 @@ p {
 }
 
 .stat-item p {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   color: var(--text-light);
   font-weight: 600;
 }
@@ -635,8 +650,19 @@ p {
 /* Contact Form moderne avec plus de contraste */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-2xl);
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--spacing-xl);
+}
+
+/* Empile proprement les cards dans la colonne gauche de apropos */
+.contact-grid > div:not(.contact-info) {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+/* Évite les hauteurs forcées qui écrasent le 2ème card */
+.contact-grid .card {
+  height: auto;
 }
 
 .contact-form-container {
@@ -690,7 +716,7 @@ p {
 
 .contact-info {
   background: linear-gradient(135deg, var(--bg-light) 0%, var(--white) 100%);
-  padding: var(--spacing-2xl);
+  padding: var(--spacing-xl);
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-light);
   box-shadow: var(--shadow-lg);
@@ -700,8 +726,8 @@ p {
   display: flex;
   align-items: center;
   gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-xl);
-  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
   background: var(--white);
   border-radius: var(--radius-xl);
   transition: var(--transition);
@@ -714,8 +740,8 @@ p {
 }
 
 .contact-icon {
-  width: 60px;
-  height: 60px;
+  width: 48px;
+  height: 48px;
   background: linear-gradient(135deg, var(--secondary-color), var(--secondary-light));
   border-radius: 50%;
   display: flex;
@@ -723,7 +749,7 @@ p {
   justify-content: center;
   color: var(--white);
   flex-shrink: 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   box-shadow: var(--shadow-lg);
 }
 
